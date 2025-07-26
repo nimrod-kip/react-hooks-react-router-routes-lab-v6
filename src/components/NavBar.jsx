@@ -3,9 +3,13 @@ import "./NavBar.css";
 
 function NavBar() {
   return (
-    <nav className="navbar">
-    
-    </nav>
+    <div className="navbar">
+      <nav role="navigation">
+      <NavLink to="/" exact="true" style={({ isActive }) => isActive ? { fontweight: "bold"} : null}>Home</NavLink>
+      <NavLink to="/directors" style={({ isActive }) => isActive ? { fontweight: "bold"} : null}>Directors</NavLink>
+      <NavLink to="/actors" style={({ isActive }) => isActive ? {fontweight: "bold"} : null}>Actors</NavLink>
+      </nav>
+    </div>
     );
 };
 
